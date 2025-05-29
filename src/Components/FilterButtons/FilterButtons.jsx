@@ -1,16 +1,24 @@
-import React from "react";
-
-const FilterButtons = ({ toDoList, completedList, allList }) => {
+const FilterButtons = ({ toDoList, completedList, allList, filter }) => {
   return (
-    <div>
-      <button onClick={allList} style={{ width: "115px" }}>
+    <div className="buttonBox">
+      <button
+        onClick={allList}
+        className={`buttonTasks ${filter === "all" ? "activeBtn" : ""}`}
+      >
         Tasks
       </button>
-
-      <button className="m-4" onClick={toDoList} style={{ width: "115px" }}>
+      <button
+        onClick={toDoList}
+        className={`buttonTodo ${filter === "todo" ? "activeBtn" : ""}`}
+      >
         ToDo
       </button>
-      <button onClick={completedList} style={{ width: "115px" }}>
+      <button
+        onClick={completedList}
+        className={`buttonCompleted ${
+          filter === "completed" ? "activeBtn" : ""
+        }`}
+      >
         Completed
       </button>
     </div>

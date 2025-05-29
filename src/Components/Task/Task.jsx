@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Task = ({ task, completeTask, deleteTask }) => {
   return (
     <div className="d-flex align-items-center">

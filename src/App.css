@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+.buttonBox button {
+  margin: 5px;
+  width: 115px;
+}
+.activeBtn {
+  background-color: green !important;
+  color: white;
+  font-weight: bold;
+}
+@media (max-width: 440px) {
+  .buttonBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+}

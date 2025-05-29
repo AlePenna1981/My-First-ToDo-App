@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import TaskList from "../TaskList/TaskList";
 import FilterButtons from "../FilterButtons/FilterButtons";
 
@@ -22,7 +22,6 @@ const TaskForm = () => {
       const taskFlag = [...tasks, { task, completed }];
       setTasks(taskFlag);
       localStorage.setItem("tasksKey", JSON.stringify(taskFlag));
-      console.log(taskFlag);
       setTask("");
     }
   };
@@ -81,6 +80,7 @@ const TaskForm = () => {
         toDoList={toDoList}
         completedList={completedList}
         allList={allList}
+        filter={filter}
       />
       <hr />
       <TaskList
